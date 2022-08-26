@@ -1,0 +1,121 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    line-height: 1.2em;
+}
+
+header{
+    background: #c20a1f;
+    padding: 1.2em 0;
+}
+
+.container{
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.logo a{
+    font-size: 1.55rem;
+    text-decoration: none;
+    color: #fbf3f6;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+  
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav__list.active{
+    display: flex;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #fbf3f6;
+    font-size: 1.33rem;
+    text-transform: uppercase;
+}
+
+.nav__item{
+    width: 100%;
+    margin-top: 1.3em;
+    text-align: center;
+}
+
+.nav__link:focus,
+.nav__link:hover{
+    color: azure;
+}
+
+.nav__item:hover{
+    transform: scale(1.2);
+}
+
+
+/* ===== Toggle BTN Styling =====  */
+.toggleBtn{
+    position: absolute;
+    top: 1rem;
+    right: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+.bar{
+    height: 3px;
+    width: 100%;
+    background-color: aliceblue;
+    margin: .19em;
+    border-radius: 10px;
+}
+
+/* Media Query For Navigation Menu */
+@media screen and (min-width: 768px){
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav__list{
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+        width: 30%;
+    }
+    .nav__item{
+        margin-top: 0;
+    }
+    
+    .nav__item + .nav__item{
+        margin-left: .95em;
+    }
+
+    .toggleBtn{
+        display: none;
+    }
+}
